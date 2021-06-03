@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+pylint = "*"
+djangorestframework = "*"
+psycopg2-binary = "*"
+pyjwt = "*"
+zappa = "*"
+django-s3-storage = "*"
+tqdm = "*"
+zappa-django-utils = "*"
+django-environ = "*"
+
+[dev-packages]
+pylint = "*"
+
+[requires]
+python_version = "3.8"
