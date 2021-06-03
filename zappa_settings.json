@@ -1,0 +1,14 @@
+{
+  "dev": {
+      "django_settings": "project.settings",
+      "profile_name": "default",
+      "project_name": "archeon-api",
+      "runtime": "python3.8",
+      "s3_bucket": "archeon-bucket",
+      "aws_region" : "eu-west-2",
+      "vpc_config" : {
+        "SubnetIds": [ "subnet-3a3cbc76","subnet-73f4c51a","subnet-5b750821" ],
+        "SecurityGroupIds": [ "sg-b54505c8" ]
+      }
+    }
+}
