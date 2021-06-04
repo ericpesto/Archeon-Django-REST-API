@@ -6,6 +6,10 @@ from rest_framework.exceptions import NotFound
 
 from .models import Stock
 from .serializers.common import StockSerializer
+<<<<<<< HEAD
+=======
+from .serializers.populated import PopulatedStockSerializer
+>>>>>>> main
 
 from django.db.models import Max
 
@@ -41,7 +45,11 @@ class StockDetailView(APIView):
     
     def get(self, _request, pk):
         stock_item = self.get_stock_item(pk=pk)
+<<<<<<< HEAD
         serialized_stock_item = StockSerializer(stock_item)
+=======
+        serialized_stock_item = PopulatedStockSerializer(stock_item)
+>>>>>>> main
         return Response(serialized_stock_item.data, status=status.HTTP_200_OK)
 
     def put(self, request, pk):

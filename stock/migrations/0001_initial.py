@@ -19,7 +19,7 @@ class Migration(migrations.Migration):
             name='Stock',
             fields=[
                 ('stock_type', models.CharField(blank=True, max_length=1, null=True)),
-                ('stock_num', models.IntegerField(blank=True, default=stock.models.Stock.number_of_stock_items, null=True)),
+                ('stock_num', models.IntegerField(blank=True, default=stock.models.Stock.stock_num_index, null=True)),
                 ('stock_code', models.CharField(max_length=20, primary_key=True, serialize=False)),
                 ('partnership', models.BooleanField(blank=True, null=True)),
                 ('status', models.CharField(blank=True, max_length=20, null=True)),

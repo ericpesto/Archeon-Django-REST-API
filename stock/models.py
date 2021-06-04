@@ -4,7 +4,11 @@ from django.db.models import Max
 # ?  Work through this model and comment where relationships exist and note the type.
 class Stock(models.Model):
 
+<<<<<<< HEAD
     def number_of_stock_items():
+=======
+    def stock_num_index():
+>>>>>>> main
         stock = Stock.objects.all()
         num = stock.aggregate(Max('stock_num'))['stock_num__max']
         if num is None:
@@ -14,7 +18,11 @@ class Stock(models.Model):
 
 
     stock_type = models.CharField(max_length=1, blank=True, null=True)
+<<<<<<< HEAD
     stock_num = models.IntegerField(default=number_of_stock_items, blank=True, null=True)   
+=======
+    stock_num = models.IntegerField(default=stock_num_index, blank=True, null=True)   
+>>>>>>> main
     stock_code = models.CharField(primary_key=True, max_length=20)
     partnership = models.BooleanField(blank=True, null=True)
     status = models.CharField(blank=True, null=True, max_length=20)
@@ -45,6 +53,7 @@ class Stock(models.Model):
         null=True, 
         db_column='sub_category_2_id'
     )
+<<<<<<< HEAD
 
     # category_id = models.OneToOneField(
     #     'categories.Category', 
@@ -70,6 +79,8 @@ class Stock(models.Model):
     #     null=True, 
     #     db_column='sub_category_2_id'
     # )
+=======
+>>>>>>> main
     title = models.TextField(blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     # artist_id = models.IntegerField(blank=True, null=True)
