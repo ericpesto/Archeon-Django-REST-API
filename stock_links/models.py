@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here.
 class StockLink(models.Model):
     link_id = models.AutoField(primary_key=True)
+    # link_id = models.IntegerField(primary_key=True, blank=True)
     # stock_code = models.CharField(blank=True, null=True, max_length=20)
     stock_code = models.ForeignKey(
         'stock.Stock',

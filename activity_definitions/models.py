@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here.
 class ActivityDefinition(models.Model):
     activity_type_id = models.AutoField(primary_key=True)
+    # activity_type_id = models.IntegerField(primary_key=True, blank=True)
     item_given_out = models.BooleanField(blank=True, null=True)
     includes_amount = models.BooleanField(blank=True, null=True)
     amount_name = models.TextField(blank=True, null=True)

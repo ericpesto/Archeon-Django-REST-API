@@ -4,6 +4,7 @@ from django.db import models
 
 class Category(models.Model):
     category_name = models.TextField(blank=True, null=True)
+    # category_id = models.IntegerField(primary_key=True, blank=True)
     category_id = models.AutoField(primary_key=True)
     # category_parent = models.IntegerField(blank=True, null=True)
     category_parent = models.ForeignKey(

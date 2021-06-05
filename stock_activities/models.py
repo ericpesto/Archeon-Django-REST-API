@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here
 
 class StockActivity(models.Model):
+    # activity_id = models.IntegerField(primary_key=True, blank=True)
     activity_id = models.AutoField(primary_key=True)
     # stock_code = models.CharField(blank=True, null=True, max_length=20)
     stock_code = models.ForeignKey(
